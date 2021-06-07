@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to Derby Race</title>
+    <!--    google fonts import-->
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    <!--    title font-->
+    <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet"/>
+    <!--    upload font-->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
+    <!--    button-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!--    css file-->
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='styles/index.css')}}" />
+</head>
+<body>
+    <div id ="title-center">
+        <h1 id="title" style="padding-left:90px;"> API fetching:</h1>
+    </div>
+
+<!--            <section>-->
+
+    <div style="position:absolute; left:50%;top:50%;transform:translate(-50%,-50%);width:1000px;height:auto;max-height:700px;background-color:black;color:#39FF14;overflow-y:scroll; ">
+
+        <p style="background-color:black;color:#39FF14;padding:15px;margin-top:15px;" align="justify">
+            The {{type}} data retrieved response as :
+            <table>
+            {% for i in range(result|length): %}
+                <tr>
+                    <td>{{ result[i] }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+        </p>
+    </div>
+
+<!--            </section>-->
+
+
+
+
+</body>
+</html>

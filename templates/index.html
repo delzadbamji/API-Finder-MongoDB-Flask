@@ -1,0 +1,156 @@
+<!-- Frontend Webpage for the app to communicate with the user.
+     The text is sent over in a post method and is processed.
+     Once the text is received, the div containing the result is displayed.
+     Author: Delzad Bamji    -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to Derby Race</title>
+    <!--    google fonts import-->
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    <!--    title font-->
+    <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet"/>
+    <!--    upload font-->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
+    <!--    button-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!--    css file-->
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='styles/index.css')}}" />
+</head>
+<body>
+<marquee><strong>[Note: clubbed query will returned clubbed results if such data exists]</strong></marquee>
+<div id="Container">
+
+        <div id ="title-center">
+            <h1 id="title" style="padding-left:90px;"> API fetching:</h1>
+<!--            <h5>Choose whatever you like (wisely) and leave the rest blank</h5>-->
+        </div>
+    <section class="padding-content">
+        <div id="Content">
+<!--            -->
+                <table style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);">
+                    <tr>
+                        <td>
+                            <section class="padding-content">
+                                <div style="margin-left:40%;">
+                                    <form  action="#" name="form" method="post">
+                                        <h5 name="APIdata" id="APIdata" class="pad-bottom-right">API Data - </h5>
+                                        <h6>Title </h6>
+                                        <input type="text" class="ip" name="title1" id="title1" placeholder="Daum Shopping,Daum Search,..."/>
+                                        <h6>Rating: </h6>
+                                        <select id="rating1-drop" name="rating1-drop">
+                                            <option value="eq" selected>eq</option>
+                                            <option value="gt">gt</option>
+                                            <option value="lt">lt</option>
+                                        </select>
+
+                                        <input type="text" class="ip" name="rating1" id="rating1" placeholder="5.0,4.4,3.7,..."/>
+                                        <h6>Updated year: </h6>
+                                        <select id="updated1-drop" name="updated1-drop">
+                                            <option value="eq" selected>eq</option>
+                                            <option value="gt">gt</option>
+                                            <option value="lt">lt</option>
+                                        </select>
+                                        <input type="text" class="ip" name="updated1" id="updated1" placeholder="2007,2012,2011,..."/>
+                                        <h6> Protocol: </h6>
+                                        <input type="text" class="ip" name="protocol1" id="protocol1" placeholder="REST,SOAP..."/>
+                                        <h6> Tag: </h6>
+                                        <input type="text" class="ip" name="tag1" id="tag1" placeholder="'deadpool', 'video','biology',..."/>
+                                        <h6> Category: </h6>
+                                        <input type="text" class="ip" name="category1" id="category1" placeholder="Video,Social,Shopping..."/>
+                                        <h6> Summary: </h6>
+                                        <input type="text" class="ip" name="summary1" id="summary1" placeholder="enter summary keyword..."/>
+                                        <h6> Description: </h6>
+                                        <input type="text" class="ip" name="description1" id="description1" placeholder="enter description keyword..."/>
+                                        <br>
+                                        <br>
+                                        <button type="submit" name="submitButtonGet" id="submitButtonGet" class="btn btn-primary btn-rounded btn-lg" value="GetAPI">
+                                            Retrieve API!
+                                        </button>
+                                    </form>
+                                </div>
+                            </section>
+                        </td>
+
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+
+                        <td>
+                            <section class="padding-content">
+                        <div style="margin-left:40%;">
+                        <form action="#" name="form2" method="post">
+                            <h5 name="mashupdata" id="mashupData" class="pad-bottom-right">Mashup Data - </h5>
+                            <h6>Title </h6>
+                            <input type="text" class="ip" name="title2" id="title2" placeholder="Daum Shopping,Daum Search,..."/>
+                            <h6>Rating: </h6>
+                            <select id="rating2-drop" name="rating2-drop">
+                                            <option value="eq" selected>eq</option>
+                                            <option value="gt">gt</option>
+                                            <option value="lt">lt</option>
+                            </select>
+                            <input type="text" class="ip" name="rating2" id="rating2" placeholder="5.0,4.4,3.7,..."/>
+                            <h6>Updated year: </h6>
+                            <select id="updated2-drop" name="updated2-drop">
+                                            <option value="eq" selected>eq</option>
+                                            <option value="gt">gt</option>
+                                            <option value="lt">lt</option>
+                            </select>
+                            <input type="text" class="ip" name="updated2" id="updated2" placeholder="2007,2012,2011,..."/>
+                            <h6> Label: </h6>
+                            <input type="text" class="ip" name="label2" id="label2" placeholder="label..."/>
+                            <h6> Tag: </h6>
+                            <input type="text" class="ip" name="tag2" id="tag2" placeholder="'deadpool', 'video','biology',..."/>
+                            <h6> API: </h6>
+                            <input type="text" class="ip" name="APIname" id="APIname" placeholder="API name..."/>
+                            <h6> Summary: </h6>
+                            <input type="text" class="ip" name="summary2" id="summary2" placeholder="enter summary keyword..."/>
+                            <h6> Description: </h6>
+                            <input type="text" class="ip" name="description2" id="description2" placeholder="enter description keyword..."/>
+                            <br>
+                            <br>
+                        <button type="submit" name="submitButtonGetMashup" id="submitButtonGetMashup" class="btn btn-primary btn-rounded btn-lg" value="submitButtonGetMashup">
+                            Retrieve Mashup!
+                        </button>
+                        </form>
+                        </div>
+                            </section>
+                        </td>
+                    </tr>
+                </table>
+        </div>
+            </section>
+
+
+
+
+
+
+
+
+<!--            <section>-->
+<!--                <div class="results">-->
+<!--                    <div id="textContainer">-->
+<!--    &lt;!&ndash;                    <h2 style="position:absolute;top:-60px; min-width:500px;">The info is as follows:</h2>&ndash;&gt;-->
+<!--                        <p id ="op" align="justify">-->
+<!--                            The {{type}} data retrieved response as :-->
+<!--                            {% for i in result: %}-->
+<!--                                {{i}}-->
+<!--                            {% endfor %}-->
+<!--                        </p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </section>-->
+
+
+
+        </div>
+    </section>
+
+</div>
+</body>
+</html>
