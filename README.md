@@ -1,7 +1,6 @@
 # API-Finder-MongoDB-Flask
 
-List of API data is available in the data directory.
-
+- List of API data is available in the data directory.
 
 - The flask server spins up on your browser and the content is served on localhost.
 
