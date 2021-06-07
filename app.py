@@ -1,6 +1,5 @@
 '''
-This is the server for the application. Run this and visit the server on the website.
-Enter the ISO code for Countries (one at a time). Enjoy the air quality \m/ .
+This is the server for the application.
 Author: Delzad Bamji
 '''
 
