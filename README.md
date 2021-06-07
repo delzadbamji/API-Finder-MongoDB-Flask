@@ -3,7 +3,7 @@
 List of API data is available in the data directory.
 
 
-The flask server spins up on your browser and the content is served on localhost.
+- The flask server spins up on your browser and the content is served on localhost.
 
 
 - You can use filters to get a web service of your choice from the database.
