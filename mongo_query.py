@@ -6,7 +6,7 @@ from bson.json_util import dumps
 from tqdm import tqdm
 import re
 
-uri = "mongodb://localhost:27017"
+uri = "env.URI"
 
 client = pymongo.MongoClient(uri, connectTimeoutMS=200, retryWrites=True)
 print(client)
