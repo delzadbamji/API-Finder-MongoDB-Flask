@@ -9,3 +9,8 @@
 - The content of the database is available as a json file for reference, but if you run the code, it will expect you to load the data from the mongoDB database on your local (unless you tweak the code).
 
 - data preprocessing is also provided incase you decide to reload the data on your local.
+
+
+Since the main focus of this application was server-side, the UI is left basic.
+
+
